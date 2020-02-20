@@ -1,5 +1,5 @@
 import pyodbc
-from config import pyodbc_params	
+from connection_config import pyodbc_params	
 
 
 '''
@@ -46,3 +46,4 @@ def run_sp(sp, values=None):
         raise ex
     except Exception as ex:                 # other exception
         raise ex
+

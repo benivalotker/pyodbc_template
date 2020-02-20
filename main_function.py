@@ -9,7 +9,7 @@
 
 import json
 import config
-import pyodbc_manager
+import pyodbc_module
 
 
 def main_function():
