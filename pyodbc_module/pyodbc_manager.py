@@ -5,7 +5,7 @@ from connection_config import pyodbc_params
 '''
 fast execute many statment  
     - insert_statement (string):    "INSERT INTO table_name (...) VALUES(?,?,?);"
-    - values (list of tuples):      [(row1), (row2), (row3) .... ] 
+    - values (list of tuples):      [ (row1), (row2), (row3) .... ] 
 '''
 def sql_insert(insert_statement, values):
     try:
@@ -18,11 +18,11 @@ def sql_insert(insert_statement, values):
             conn.commit()
 
     except pyodbc.OperationalError as ex:   # errors that are related to the database's operation and not necessarily under the control of the programmer
-        raise ex
+        pass
     except pyodbc.InterfaceError as ex:     #  errors that are related to the database interface rather than the database itself
-        raise ex
+        pass
     except Exception as ex:                 # other exception
-        raise ex
+        pass
 
 
 '''
@@ -41,9 +41,9 @@ def run_sp(sp, values=None):
             conn.commit()
 
     except pyodbc.OperationalError as ex:   # errors that are related to the database's operation and not necessarily under the control of the programmer
-        raise ex
+        pass
     except pyodbc.InterfaceError as ex:     #  errors that are related to the database interface rather than the database itself
-        raise ex
+        pass
     except Exception as ex:                 # other exception
-        raise ex
+        pass
 
